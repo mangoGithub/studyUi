@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" ng-app>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <title>作品展集</title>
+    <link rel="shortcut icon" href="../../resource/images/favicon.ico"/>
+    <link rel="stylesheet" href="../../resource/css/ui/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../resource/css/core/font-awesome.min.css"/>
+    <!-- HlTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../resource/js/tools/html5shiv.js"></script>
+      <script src="../../resource/js/tools/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet/less" type="text/css" href="../../resource/css/less/useless.less"/>
+</head>
+<style>
+	.lg-block-grid-4 li{padding:0px 10px;text-align:center;border-right:1px solid #ddd;}
+	.lg-block-grid-4 li:last-child{border:none;}
+	.lg-block-grid-4 li h2{ background:#5cc1fa;font-size:18px; color:#fff;padding:3px; margin:0px;}
+	.lg-block-grid-4 li a{display:block;font-size:14px; color:#999; padding:3px;}
+	.lg-block-grid-4 li a:hover{background:#8ee1fe;color:#fff;}
+</style>
+<body>
+<header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#" class="fa fa-windows" style="font-size:50px;"></a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#doc-topbar-collapse-4'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-4">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li -class="am-active"><a href="#">学习api、示例展示、ui、插件使用、规则、架构</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="am-panel am-panel-default am-container" style="margin-top:61px;">
+  <div class="am-panel-hd">什么是angularJs？</div>
+  <div class="am-panel-bd">
+      <img src="../../resource/images/angular/1.png"/>
+  	<p>基于javascript开发的客户端应用框架，使我们可以更加快捷，简单的开发web应用。</p>
+    <p>诞生于2009年，后来被google收购，用在了很多项目中。</p>
+    <p>适用于CRUD应用或者SPA单页面网站的开发。</p>
+      <img src="../../resource/images/angular/2.png"/>
+    <p>angularJs资源</p>
+    <p><a href="http://www.angularjs.org/">http://www.angularjs.org/</a></p>
+    <p><a href="https://www.github.com/angular/">https://www.github.com/angular/</a></p>
+    <p><a href="http://www.angularjs.cn/">http://www.angularjs.cn/</a></p>
+    <p><a href="http://www.ngnice.com/">http://www.ngnice.com/</a></p>
+    <p><a href="http://woxx.sinaapp.com/">http://woxx.sinaapp.com/</a></p>
+    <p>angularJs下载</p>
+    <p><a href="http://www.bootcdn.cn/angular.js/">http://www.bootcdn.cn/angular.js/</a></p>
+    <p>npm install angular
+    </p>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">angular用法</div>
+  <div class="am-panel-bd">
+      <img src="../../resource/images/angular/3.png"/>
+      <script>
+            function Aaa($scope,$rootScope){
+                $scope.name = "mars";
+                $rootScope.age = 20;
+                $scope.age = 40;
+
+            }
+          function Bbb($scope){
+              $scope.name ="mango";
+              $scope.age = 40;
+          }
+          function Ccc($scope,$timeout){
+              $scope.names = "mars";
+              $timeout(function(){
+                  $scope.names = "hello";
+              },1000)
+          }
+            function dd($scope){
+                $scope.name ="mango";
+                $scope.age = 40;
+            }
+            function ee($scope){
+                $scope.name ="mango";
+                $scope.age = 40;
+            }
+      </script>
+  	<p ng-controller="Aaa">
+        {{name}}
+        {{age}}
+    </p>
+  	<p ng-controller="Bbb">{{name}}{{age}}</p>
+      <img src="../../resource/images/angular/4.png"/>
+    <p>作用域：可以向父级找</p>
+      <p>依赖注入：angular的函数的形参是不弄变的，只能是$scope 和 rootScope</p>
+      <img src="../../resource/images/angular/5.png"/>
+    <p>双向数据绑定：当数据改变视图改变，视图改变数据也改变 mvvm</p>
+      <p>指令：ng-app（初始化-可以写到html上也可以写到div上局部显示）、ng-controller、ng-click</p>
+    <p ng-controller="Ccc">{{names}}</p>
+      <p ng-controller="dd" ng-click="age=50">m影响到v：{{age}}</p>
+      <p>ng-click除了直接写字符还可以写函数的形式ng-click="show()"</p>
+      <div ng-controller="ee">
+          <input type="text" ng-model="name"/>
+          <p>v影响到m：{{name}}</p>
+      </div>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+    <div class="am-panel-hd">小例子：购物价格计算</div>
+    <img src="../../resource/images/angular/6.png"/>
+    <script>
+        function buyShop($scope){
+            $scope.iphone = {
+                money :5000,
+                num : 1,
+                fre : 10,
+            }
+            $scope.sum = function(){
+                return $scope.iphone.money*$scope.iphone.num
+            }
+            $scope.$watch($scope.sum,function(newVal,oldVal){
+                //console.log(newVal);
+               // console.log(oldVal)
+                $scope.iphone.fre = newVal >10000 ? 0 :10;
+            })
+        }
+    </script>
+    <div class="am-panel-bd" ng-controller="buyShop">
+        <p>价格：<input type="text" ng-model="iphone.money"/></p>
+        <p>个数：<input type="text" ng-model="iphone.num"/></p>
+        <p>费用：{{sum() | currency:'￥'}}</p>
+        <p>运费：{{iphone.fre | currency:"￥"}}</p>
+        <p>总额：{{sum() + iphone.fre | currency:"￥"}}</p>
+        <p>currency:过滤器sum() + iphone.fre | currency:"￥"</p>
+        <p>$watch:监听数据-1,只能监听单值的变化，不可以监听多值，
+            2,要是想监听多值，就要设置第三个参数true
+            3,除了监听字符串还可以监听函数
+        </p>
+    </div>
+
+</div>
+
+<footer data-am-widget="footer"
+          class="am-footer am-footer-default"
+           data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          云适配版
+    </span>
+      <span class="am-footer-divider"> | </span>
+      <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+          电脑版
+      </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+          <p>由 <a href="http://www.yunshipei.com/" title="诺亚方舟"
+                                                target="_blank" class="">诺亚方舟</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  AllMobilize Inc.</p>
+        <p>京ICP备13033158</p>
+    </div>
+  </footer>
+<div id="am-footer-modal"
+   class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+<div class="am-modal-dialog">
+  <div class="am-modal-hd am-modal-footer-hd">
+    <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+  </div>
+  <div class="am-modal-bd">
+      您正在浏览的是
+
+    <span class="am-switch-mode-owner">
+        云适配
+    </span>
+
+    <span class="am-switch-mode-slogan">
+          为您当前手机订制的移动网站。
+    </span>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script src="../../resource/js/core/sea.js"></script>
+<script src="../../resource/js/lib/config.js"></script>
+<script>
+	seajs.use("lib/angular-ng.js");
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<script src="resource/js/core/jquery-min.js"></script>
+<style>
+#box{
+width:140px;height:231px; margin:50px auto;
+background:url(resource/images/2.jpg) no-repeat; position:relative;
+}
+.zhan{width:140px; background:#FCF; color:#666; font-size:30px; height:100px; position:absolute; left:0px; top:231px; text-align:center; vertical-align:middle; line-height:100px; display:none;}
+</style>
+<body>
+<div id="box" off="1">
+	<div class="zhan">
+    	展开信纸
+    </div>
+</div>
+<script>
+$(function(){
+	musicIE();
+})
+function musicIE(){
+	//声音兼容性，兼容ie8-
+	var oaudio='<audio id="music" src="http://ysc.yisell.com/yisell/ycys2015718158529188/sound/yisell_sound_2014082200063873296_66366.mp3" autoplay="true" preload="auto" loop="true"></audio>';
+	var oembed = '<embed id="music" type="audio/mp3" src="http://ysc.yisell.com/yisell/ycys2015718158529188/sound/yisell_sound_2014082200063873296_66366.mp3" autostart="true" loop="true" hidden="ture" width="0" height="0"></embed>';
+	var DEFAULT_VERSION = "8.0";
+	var ua = navigator.userAgent.toLowerCase();
+	var isIE = ua.indexOf("msie")>-1;
+	var safariVersion;
+	if(isIE){
+		safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+		if(safariVersion <= DEFAULT_VERSION ){
+			$('#box').append(oembed);
+			//stepFive($('#box'),$('.zhan'),$('#music')[0]);
+		}else{
+			$('#box').append(oaudio);
+			//stepFive($('#box'),$('.zhan'),$('#music')[0]);
+		}
+	}else{
+		$('#box').append(oaudio);
+		//stepFive($('#box'),$('.zhan'),$('#music')[0]);
+	}
+	stepFive($('#box'),$('.zhan'),$('#music')[0]);
+}
+function stepFive(o,oChild,omuisc){
+	//stepFive说明：控制鸽子运动，展开信纸，控制声音播放、暂停
+	var timer = null,n=0;
+	clearInterval(timer);
+	timer=setInterval(function(){
+		n++;
+		$(o).css({'background-position':-(n*140)});
+		if(n == 4){
+			n=-1;
+		}		
+	},100);
+	$(o).on('click',function(){
+		if($(this).attr('off') == '1'){
+			$(oChild).slideDown();
+			omuisc.pause();
+			clearInterval(timer);
+			$(this).attr('off','0');
+		}else{
+			clearInterval(timer);
+			timer=setInterval(function(){
+				n++;
+				$(o).css({'background-position':-(n*140)});
+				if(n == 4){
+					n=-1;
+				}		
+			},100);
+			$(oChild).slideUp();
+			omuisc.play();
+			$(this).attr('off','1');
+		}
+	});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <title>作品展集</title>
+    <link rel="shortcut icon" href="../../../resource/images/favicon.ico"/>
+    <link rel="stylesheet" href="../../../resource/css/ui/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../../resource/css/core/font-awesome.min.css"/>
+</head>
+<style>
+	.lg-block-grid-4 li{padding:0px 10px;text-align:center;border-right:1px solid #ddd;}
+	.lg-block-grid-4 li:last-child{border:none;}
+	.lg-block-grid-4 li h2{ background:#5cc1fa;font-size:18px; color:#fff;padding:3px; margin:0px;}
+	.lg-block-grid-4 li a{display:block;font-size:14px; color:#999; padding:3px;}
+	.lg-block-grid-4 li a:hover{background:#8ee1fe;color:#fff;}
+</style>
+<script>
+//像素比计算
+var iScale=1;
+iScale/=window.devicePixelRatio;
+document.write('<meta name="viewport" content="width=device-width,initial-scale='+iScale+',minimum-scale='+iScale+',maximum-scale='+iScale+'" />');
+</script>
+<body>
+<header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#" class="fa fa-windows" style="font-size:50px;"></a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#doc-topbar-collapse-4'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-4">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li -class="am-active"><a href="#">学习api、示例展示、ui、插件使用、规则、架构</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="am-panel am-panel-default am-container" style="margin-top:10px;">
+  <div class="am-panel-hd">移动端meta</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth8/1.jpg" alt="" width="630" height="473"></p>
+    <p>总结：＜ meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/＞</p>
+    <p>物理分别率：手机本身默认的分别率 eg:iphone5:1136x640</p> 
+    <p>实际分别率: eg:iphone5实际 320</p>
+    <p>像素比：物理分别率/实际分别率 2</p>
+    <p style="background:#eee;padding:10px;">＜script><br/>
+//像素比计算<br/>
+var iScale=1;<br/>
+iScale/=window.devicePixelRatio;<br/>
+document.write('＜meta name="viewport" content="width=device-width,initial-scale='+iScale+',minimum-scale='+iScale+',maximum-scale='+iScale+'" /＞');<br/>
+＜/script＞</p>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">移动端Media Queries</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth8/meta.jpg" alt="" width="632" height="474"></p>
+    <p>1,样式引入的3中方法中media的使用方式</p>
+    <p><img src="../../../resource/images/css3/nth8/mediatype.jpg" alt="" width="631" height="478"><img src="../../../resource/images/css3/nth8/improtant.jpg" alt="" width="628" height="473"><img src="../../../resource/images/css3/nth8/texing.jpg" alt="" width="631" height="475"></p>
+    <p>max-width和 max-device-width的区别：max-device-width包含滚动条</p>
+    <p style="background:#eee;padding:10px;">2,以第3种@media调用方式说明：<br/>
+    @media screen{<br/>
+        .box{width:200px;height:200px;background:Red;}<br/>
+    }<br/>
+</p> 
+    <p style="background:#eee;padding:10px;">
+    自适应：<br/>
+    @media all and (max-width:420px){<br/>
+		.box{width:200px;height:200px;background:Red;}<br/>
+	}<br/>
+    @media all and (max-width:1024px) and (min-width:421px){<br/>
+        .box{width:300px;height:300px;background:blue;}<br/>
+    }<br/>
+    @media all and (min-width:1025px){<br/>
+        .box{width:400px;height:400px;background:yellow;}<br/>
+    }<br/>
+    /*<br/>
+    max-width:600px	600以及600一下宽度识别<br/>
+    min-width:421px 421以及421以上宽度识别<br/>
+    */<br/>
+</p>
+    <p>像素比：物理分别率/实际分别率 </p>
+    
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">Css3分栏布局</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth8/2.jpg" alt="" width="630" height="476"></p>
+    <p>注意：分栏布局中如果设置width和行数，只认行数，宽度没效果</p>
+    <p style="background:#eee;padding:10px;">
+    html结构：<br/>
+    ＜div class="wrap"＞<br/>
+        ＜p＞啦啦啦……＜/p＞<br/>
+        ＜p＞……＜/p＞<br/>
+        ＜p＞……＜/p＞<br/>
+        ＜p＞……＜/p＞<br/>
+        ＜p＞……＜/p＞<br/>
+        ＜p＞啦啦啦，啦啦啦……＜/p＞<br/>
+	＜/div＞<br/>
+	css编写：<br/>
+    ＜style＞<br/>
+    @media all and (orientation:portrait){<br/>
+        .wrap{ -webkit-column-count:3;-webkit-column-gap:100px; -webkit-column-rule:1px solid #000;}<br/>
+    }<br/>
+    @media all and (orientation:landscape){<br/>
+        .wrap{ -webkit-columns:3;}<br/>
+    }<br/>
+＜/style＞
+</p>
+<p><img src="../../../resource/images/css3/nth8/jieguo1.jpg" alt="" width="1001" height="319"></p>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">弹性盒模型display：flex</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth8/3.jpg" alt="" width="630" height="477"></p>
+    <p>弹性布局：<img src="../../../resource/images/css3/nth8/flex1.jpg" alt="" width="637" height="241"></p>
+    <p>设置主轴方向：
+    <img src="../../../resource/images/css3/nth8/flex2.jpg" alt="" width="739" height="318"></p>
+    <p><img src="../../../resource/images/css3/nth8/flex3.jpg" alt="" width="632" height="474"><img src="../../../resource/images/css3/nth8/flex5.jpg" alt="" width="632" height="477"><img src="../../../resource/images/css3/nth8/flex6.jpg" alt="" width="631" height="475"><img src="../../../resource/images/css3/nth8/flex7.jpg" alt="" width="632" height="476"><img src="../../../resource/images/css3/nth8/flex8.jpg" alt="" width="633" height="475"><img src="../../../resource/images/css3/nth8/flex9.jpg" alt="" width="634" height="475"></p>
+    <p><img src="../../../resource/images/css3/nth8/flex4.jpg" alt="" width="1266" height="466"></p>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">盒模型阴影</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth8/box1.jpg" alt="" width="633" height="475"></p>
+    <style>
+    	.shadow1{width:200px; height:50px; background:blue;
+		-webkit-box-shadow:10px 10px 30px #333;}
+    </style>
+    -webkit-box-shadow:10px 10px 30px #333;
+    <div class="shadow1"></div>
+    <p><img src="../../../resource/images/css3/nth8/box2.jpg" alt="" width="628" height="478"></p>
+    <style>
+    .reflect{width:200px; height:50px; background:blue;
+	-webkit-box-reflect:right 0px;}
+    </style>
+    <div class="reflect"></div>
+    <p>
+    <img src="../../../resource/images/css3/nth8/box3.jpg"/>
+    </p>
+  </div>
+</div>
+<footer data-am-widget="footer"
+          class="am-footer am-footer-default"
+           data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          云适配版
+    </span>
+      <span class="am-footer-divider"> | </span>
+      <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+          电脑版
+      </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+          <p>由 <a href="http://www.yunshipei.com/" title="诺亚方舟"
+                                                target="_blank" class="">诺亚方舟</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  AllMobilize Inc.</p>
+        <p>京ICP备13033158</p>
+    </div>
+  </footer>
+<div id="am-footer-modal"
+   class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+<div class="am-modal-dialog">
+  <div class="am-modal-hd am-modal-footer-hd">
+    <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+  </div>
+  <div class="am-modal-bd">
+      您正在浏览的是
+
+    <span class="am-switch-mode-owner">
+        云适配
+    </span>
+
+    <span class="am-switch-mode-slogan">
+          为您当前手机订制的移动网站。
+    </span>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script src="../../../resource/js/core/sea.js"></script>
+<script src="../../../resource/js/lib/config.js"></script>
+<script>
+	seajs.use("lib/index.js");
+</script>

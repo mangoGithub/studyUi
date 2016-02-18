@@ -1,0 +1,27 @@
+/* head */
+.head{background:#333; height:50px; line-height:50px; position:fixed; z-index:9999; left:0px; top:0px;width:100%;}
+.head ul{margin:0px 40px;}
+.head ul li{ float:left;font-size:18px; color:#FFC;}
+.head ul li a{color:#fff; font-size:16px; display:block; padding:0px 10px;}
+.head ul li a:hover,.head ul li a.act{ background:#09F;}
+
+/*content*/
+.layout{}
+.layout h2{
+padding: 0 0 5px;
+font-size: 24px;
+}
+.layout .layleft{width:20%; float:left;margin:50px 0;
+background: linear-gradient( to bottom, #FFF, #FFF 50%, #EDF3FE 50%, #EDF3FE );
+background-size: 100% 80px;
+overflow: auto;
+height:800px;
+background-attachment: local;border-right:1px solid #ccc;}
+.layout .layright{float:left; margin:50px 0; padding:20px;width:70%;}
+.layout .layleft a{display:block; height:40px; line-height:40px; text-align:center; font-size:16px;}
+.layout .layleft a:hover{background:#f2f2f2;}
+.layout .layleft a.act{ background:#f38211; color:#fff;}
+.layout .layright p{ line-height:30px; font-size:14px;}
+.layout .layright dd{background:#f2f2f2; line-height:25px; padding:10px; border:1px solid #ccc;}
+.layout .layright ul li{ list-style:circle; margin-left:50px; line-height:22px;}
+.layout .layright dd .dt{ color:#09F;}

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <title>作品展集</title>
+    <link rel="shortcut icon" href="../../../resource/images/favicon.ico"/>
+    <link rel="stylesheet" href="../../../resource/css/ui/amazeui.min.css"/>
+    <link rel="stylesheet" href="../../../resource/css/core/font-awesome.min.css"/>
+</head>
+<style>
+	.lg-block-grid-4 li{padding:0px 10px;text-align:center;border-right:1px solid #ddd;}
+	.lg-block-grid-4 li:last-child{border:none;}
+	.lg-block-grid-4 li h2{ background:#5cc1fa;font-size:18px; color:#fff;padding:3px; margin:0px;}
+	.lg-block-grid-4 li a{display:block;font-size:14px; color:#999; padding:3px;}
+	.lg-block-grid-4 li a:hover{background:#8ee1fe;color:#fff;}
+</style>
+<body>
+<header class="am-topbar am-topbar-inverse am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#" class="fa fa-windows" style="font-size:50px;"></a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#doc-topbar-collapse-4'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-4">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li -class="am-active"><a href="#">学习api、示例展示、ui、插件使用、规则、架构</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="am-panel am-panel-default am-container" style="margin-top:10px;">
+  <div class="am-panel-hd">Transition过渡</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth4/1.jpg" alt="" width="626" height="470"></p>
+    <style>
+    	.tran{display:block; width:100px; height:100px; background:yellow;transition:1s;}
+		.tran:hover{width:200px; height:200px; background:blue;}
+    </style>
+    <p>示例：(运动时间)<a href="#" class="tran"></a></p>
+    <style>
+    	.tran1{display:block; width:100px; height:100px; background:yellow;transition:1s width;}
+		.tran1:hover{width:200px; height:200px; background:blue;}
+    </style>
+    <p>示例：(要运动样式)<a href="#" class="tran1"></a></p>
+	<style>
+    	.tran2{display:block; width:100px; height:100px; background:yellow;transition:1s width,2s 1s height;}
+		.tran2:hover{width:200px; height:200px; background:blue;}
+    </style>
+    <p>示例：(延迟时间)<a href="#" class="tran2"></a></p>
+    <style>
+    	.tran3{display:block; width:100px; height:100px; background:yellow; position:absolute; top:30px; left:0px; transition:1s ease-in-out;}
+    </style>
+    <p style="position:relative; height:110px;">示例：(运动形式：匀速、加速、减速……)<a href="javascript:;" class="tran3"></a></p>
+    
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">transitionend</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth4/2.jpg" alt="" width="631" height="473"></p>
+    
+    <style>
+    	.tranend{width:100px; height:100px; background:#FCF; display:block; transition:1s width,2s heigth;}
+    </style>
+    <p><a href="javascript:;" class="tranend"></a></p>
+  </div>
+</div>
+<div class="am-panel am-panel-default am-container">
+  <div class="am-panel-hd">2D变换transform</div>
+  <div class="am-panel-bd">
+  	<p><img src="../../../resource/images/css3/nth4/3.jpg" alt="" width="635" height="476"></p>
+    <style>
+    	.transform-box{width:132px; height:132px; border:1px solid #ccc; padding:40px;}
+		.transform-div{width:50px; height:50px; text-align:center; font:16px/50px '微软雅黑'; background:#CCF; transition:1s; transform-origin:center left;}
+		.transform-box:hover .transform-div{transform:rotate(360deg);}
+    </style>
+    <div class="transform-box">
+    	<div class="transform-div">rotate</div>
+    </div>
+    <p>transform:rotate(?deg)旋转 deg:单位度</p>
+    <p>与transform搭对的样式变换基点transform-origin</p>
+    <style>
+    	.transform-box1{width:132px; height:132px; border:1px solid #ccc; padding:40px;}
+		.transform-div1{width:50px; height:50px; text-align:center; font:16px/50px '微软雅黑'; background:#CCF; transition:1s; transform-origin:left;}
+		.transform-box1:hover .transform-div1{transform:scale(2);}
+		.transform-box2{width:132px; height:132px; border:1px solid #ccc; padding:40px;}
+		.transform-div2{width:50px; height:50px; text-align:center; font:16px/50px '微软雅黑'; background:#CCF; transition:1s; transform-origin:bottom;}
+		.transform-box2:hover .transform-div2{transform:scaleY(0.5);}
+    </style>
+    <div class="transform-box1">
+    	<div class="transform-div1">scale</div>
+    </div>
+    <div class="transform-box2">
+    	<div class="transform-div2">scaleY</div>
+    </div>
+    <p>transform:scale()缩放，（1），没有单位（2），原始是1（3），缩放还分x和y：transform:scaleX()  transform:scaleY() </p>
+    <style>
+    	.transform-box4{width:132px; height:132px; border:1px solid #ccc; padding:40px;}
+		.transform-div4{width:50px; height:50px; text-align:center; font:16px/50px '微软雅黑'; background:#CCF; transition:1s;}
+		.transform-box4:hover .transform-div4{transform:skewX(-30deg);}
+    </style>
+    <div class="transform-box4">
+    	<div class="transform-div4">skew</div>
+    </div>
+    <p>skew(?deg)斜切有单位deg skew默认是以X轴斜切的，skewX（）和skewY（）</p>
+    <style>
+    	.transform-box5{width:132px; height:132px; border:1px solid #ccc; padding:40px;}
+		.transform-div5{width:50px; height:50px; text-align:center; font:16px/50px '微软雅黑'; background:#CCF; transition:1s;}
+		.transform-box5:hover .transform-div5{transform:translateY(30px);}
+    </style>
+    <div class="transform-box5">
+    	<div class="transform-div5">translate</div>
+    </div>
+    <p>transform(?px)位移有单位px transform默认是以X轴位移的，transformX（）和transformY（）</p>
+    <p><img src="../../../resource/images/css3/nth4/4.jpg" alt="" width="630" height="473"></p>
+   
+    <style>
+		.trans-box{border:1px solid #000;}
+    	.trans-rule1,.trans-rule2{width:80px; height:80px; background:red; display:block;border:1px solid #000; transition:1s;}
+		.trans-rule2{background:blue; color:#fff;}
+		.trans-box:hover .trans-rule1{ transform:translate(100px) scale(0.2);}
+		.trans-box:hover .trans-rule2{ transform:scale(0.2) translate(100px) ;}
+    </style>
+    <p class="trans-box"><em class="trans-rule1">后写</em><em class="trans-rule2">先执行</em></p>
+    <style id="trancss3">
+    .otime{width:208px; height:208px; border:4px solid #000; position:relative; border-radius:50%;}
+	.otimeList{width:200px; height:200px; position:relative;border-radius:50%;}
+	.otimeList li{margin:0px; padding:0px; width:2px; height:6px; position:absolute; top:0px; left:99px; background:#000; list-style:none; transform-origin:center 100px;}
+	/*.otimeList li:nth-child(2){transform:rotate(6deg);}
+	.otimeList li:nth-child(3){transform:rotate(12deg);}*/
+	.otimeList li:nth-child(5n+1){height:15px;}
+	.oh{width:8px; height:40px; background:#000; position:absolute; top:60px; left:96px; transform-origin:bottom;}
+	.omin{width:4px; height:60px; background:#060; position:absolute; top:40px; left:98px; transform-origin:bottom;}
+	.osec{width:2px; height:80px; background:red; position:absolute; top:20px; left:99px; transform-origin:bottom;}
+	.oc{width:18px; height:18px; position:absolute; background:#000; top:91px; left:91px;border-radius:50%;}
+    </style>
+    <div class="otime">
+    	<ul class="otimeList">
+        </ul>
+        <div class="oh"></div>
+        <div class="omin"></div>
+        <div class="osec"></div>
+        <div class="oc"></div>
+    </div>
+     <p><img src="../../../resource/images/css3/nth4/5.jpg" alt="" width="628" height="475"></p>
+     <p>matrix(a,b,c,d,e,f)矩阵函数</p>
+     <style>
+     .mbox{width:150px; height:150px; margin:30px auto; border:2px solid #000; padding:50px;}
+	 .mdiv{width:50px; height:50px; background:blue; transition:1s; transform:matrix(2,0,0,1,0,0);
+	 filter:progid:DXImageTransform.Microsoft.Matrix(M11=2,M12=0,M21=0,M22=1,SizingMethod='auto expand');}
+     </style>
+     <div class="mbox">
+     	<div class="mdiv"></div>
+     </div>
+  </div>
+</div>
+
+<footer data-am-widget="footer"
+          class="am-footer am-footer-default"
+           data-am-footer="{  }">
+    <div class="am-footer-switch">
+    <span class="am-footer-ysp" data-rel="mobile"
+          data-am-modal="{target: '#am-switch-mode'}">
+          云适配版
+    </span>
+      <span class="am-footer-divider"> | </span>
+      <a id="godesktop" data-rel="desktop" class="am-footer-desktop" href="javascript:">
+          电脑版
+      </a>
+    </div>
+    <div class="am-footer-miscs ">
+
+          <p>由 <a href="http://www.yunshipei.com/" title="诺亚方舟"
+                                                target="_blank" class="">诺亚方舟</a>
+            提供技术支持</p>
+        <p>CopyRight©2014  AllMobilize Inc.</p>
+        <p>京ICP备13033158</p>
+    </div>
+  </footer>
+<div id="am-footer-modal"
+   class="am-modal am-modal-no-btn am-switch-mode-m am-switch-mode-m-default">
+<div class="am-modal-dialog">
+  <div class="am-modal-hd am-modal-footer-hd">
+    <a href="javascript:void(0)" data-dismiss="modal" class="am-close am-close-spin " data-am-modal-close>&times;</a>
+  </div>
+  <div class="am-modal-bd">
+      您正在浏览的是
+
+    <span class="am-switch-mode-owner">
+        云适配
+    </span>
+
+    <span class="am-switch-mode-slogan">
+          为您当前手机订制的移动网站。
+    </span>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script src="../../../resource/js/core/sea.js"></script>
+<script src="../../../resource/js/lib/config.js"></script>
+<script>
+	seajs.use("lib/css3nth1.js");
+</script>

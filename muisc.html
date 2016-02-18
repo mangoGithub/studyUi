@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<script src="resource/js/core/jquery-min.js"></script>
+<body>
+<div id="box" style="width:200px; height:100px; background:red;">
+	<audio id="music" src="http://ysc.yisell.com/yisell/ycys2015718158529188/sound/yisell_sound_2014082200063873296_66366.mp3" autoplay="true" preload="auto" loop="true"></audio>
+</div>
+</body>
+</html>
+<script>
+$(function(){
+	$('#box').on('click',function(){
+		//if($('#music')[0].paused){
+			$('#music')[0].play();
+		//}else{
+			$('#music')[0].pause();
+		//}
+	})	
+})
+</script>

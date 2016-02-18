@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script src="../../resource/js/core/jquery-1.11.2.min.js"></script>
+</head>
+
+<body>
+<div class="oload"></div>
+</body>
+</html>
+<script>
+$(function(){
+	/*$('.oload').load("data.json",function(responseText,textStatus,XMLHttpRequest){
+		
+		$(this).html(responseText);
+		console.log(textStatus);
+		console.log(XMLHttpRequest);
+	});*/
+	$.post('data.json',function(data,status){
+		console.log(data);
+		alert(status);
+	});
+})
+</script>

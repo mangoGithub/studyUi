@@ -1,0 +1,33 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin: 0; padding: 0; outline:none;}
+body{font: 14px "Microsoft Yahei", "Arial Narrow", HELVETICA; background: #fff; -webkit-text-size-adjust: 100%; color:#2b3e45; text-align:center;}
+body div{text-align:left;}
+table{border-collapse: collapse; border-spacing: 0;}
+li{list-style: none;}
+p{word-wrap: break-word;}
+a{color: #172c45; text-decoration: none;text-decoration: none;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
+em{font-style: normal;}
+img{border: 0; vertical-align: top;}
+input{outline: none;}
+*:focus {outline: none;} 
+textarea{resize: none; overflow: auto; outline: none;}
+.bc{margin-left:auto;margin-right:auto;display:block;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clear:after{content: ''; display: block; clear: both;}
+.clear{zoom: 1;}
+.info{ display:table-cell;zoom:1;}
+.m1000{width: 1000px; margin: 0 auto;}
+.hide{display: none;}
+.circular {border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; behavior: url(pie.htc); z-index: 33; position: relative;}
+.circular_12 {border-radius: 12px; -moz-border-radius: 12px; -webkit-border-radius: 12px; behavior: url(pie.htc); z-index: 33; position: relative;}
+.circular_4 {border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;behavior: url(pie.htc);z-index: 33; position:relative;}
+.circular_2 {border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;behavior: url(pie.htc);z-index: 33; position:relative;}
+.alignC{ text-align:center;}
+.alignL{ text-align:left;}
+.alignR{ text-align:right;}
+.relative{position:relative;}
+.circular {border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; behavior: url(pie.htc); z-index: 33; position: relative;}
+.circular_12 {border-radius: 12px; -moz-border-radius: 12px; -webkit-border-radius: 12px; behavior: url(pie.htc); z-index: 33; position: relative;}
+.circular_4 {border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;behavior: url(../pie.htc);z-index: 33; position:relative;}
+.circular_2 {border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;behavior: url(../pie.htc);z-index: 33; position:relative;}
+

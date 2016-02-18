@@ -1,0 +1,27 @@
+/*变量*/
+@border-color : #b5bcc7;
+@bg:yellow;
+@width : 100px;
+@height : 100px; 
+.mythemes{ 
+	border : 1px solid @border-color;
+	background:@bg;
+	width:@width;
+	height:@height; 
+}
+/*混合*/
+.bordered{border:1px solid red}
+.mixin{width:@width;height:@height; background:@bg; .bordered;}
+/*嵌套*/
+.less-qie{
+	.bordered;
+	width:@width;
+	height:@height;
+	background:@bg;
+	span{
+		color:@border-color;
+	}
+	em{color:@border-color;}
+}
+
+@import "tidal.less";

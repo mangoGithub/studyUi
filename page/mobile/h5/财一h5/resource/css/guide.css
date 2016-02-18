@@ -1,0 +1,583 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+* {
+	font-weight: normal;
+	text-shadow: none!important;
+}
+
+html {
+	font-size: 14px;
+	font-family: arial,'Microsoft Yahei';
+	overflow-y: scroll;
+}
+
+.ui-page-theme-a {
+	background: #fff;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	display: block;
+}
+
+.clearfix:after {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	display: block;
+	visibility: hidden;
+	content: ".";
+}/*横屏切换*/.hide {
+	display: none;
+}
+
+html,body {
+	height: 100%;
+}
+
+.content,.wrapper {
+	height: 100%;
+}
+
+.page {
+	position: relative;
+	overflow: hidden;
+}
+
+.landscape {
+	display: none;
+	height: 100%;
+}
+
+@media screen and (orientation:landscape) {
+	.landscape {
+		height: 100%;
+		display: block;
+		background-color: #68c2eb;
+	}
+
+	.landscape .iphone {
+		background-image: url(../images/big3.png);
+		background-repeat: no-repeat;
+		width: 74px;
+		height: 109px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -54px;
+		margin-left: -36px;
+		background-size: 100%;
+		animation: zhuan 1.5s;
+		-moz-animation: zhuan 1.5s;
+		-webkit-animation: zhuan 1.5s;
+		-o-animation: zhuan 1.5s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-delay: 0.3s;
+	}
+
+	.landscape .iphone_text {
+		width: 173px;
+		height: 29px;
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: 71px;
+		margin-left: -86px;
+		color: #fff;
+	}
+
+	.swiper-container {
+		display: none;
+	}
+}
+
+body {
+	background: url(../images/bg.jpg) no-repeat center center #0a84e2;background-size: 100% 100%;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden
+}
+
+.swiper-slide {
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}/*------------page0-page2common 楼、iphone 云------------------*/
+/*向上滑动*/
+.icos_arrow {
+	position: absolute;
+	width: 2.35rem;
+	height: 1.3rem;
+	bottom: 4.5rem;
+	left: 50%;
+	z-index: 5;
+	margin-left: -1.2625rem;
+	
+	background: url(../images/icon.png) 0px 0px no-repeat;
+	background-size: contain;
+	-webkit-animation: ani_arrow 2s ease-in 0s infinite;
+	-moz-animation: ani_arrow 2s ease-in 0s infinite;
+	-ms-animation: ani_arrow 2s ease-in 0s infinite;
+	animation: ani_arrow 2s ease-in 0s infinite
+}
+
+.bar {
+	width: 100%;
+	height: 13rem;
+	background: url(../images/b.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	bottom: 3.65rem;
+	left: 0px;
+}
+
+.bar1 {
+	width: 100%;
+	height: 7.8rem;
+	background: url(../images/b1.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	bottom: 3.65rem;
+	left: 0px;
+}
+
+.page1 .word {
+	width: 26rem;
+	height: 26rem;
+	background: url(../images/p1.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -13rem;
+	top: 9.5rem;
+}
+
+.page2 .word {
+	width: 26rem;
+	height: 27.6rem;
+	background: url(../images/p2.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -13rem;
+	top: 9.5rem;
+}
+
+.page3 .word {
+	width: 23.35rem;
+	height: 32rem;
+	background: url(../images/p3.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -11.68rem;
+	top: 9.5rem;
+}
+
+.page4 .word {
+	width: 24.9rem;
+	height: 30.2rem;
+	background: url(../images/p4.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -12.45rem;
+	top: 9.5rem;
+}
+
+.page5 .word {
+	width: 22.15rem;
+	height: 33.15rem;
+	background: url(../images/p4.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -11.08rem;
+	top: 9rem;
+}
+
+.page6 .word {
+	width: 24.05rem;
+	height: 32.6rem;
+	background: url(../images/p6.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -12.03rem;
+	top: 9.2rem;
+}
+
+.page7 .logo {
+	width: 11.45rem;
+	height: 5.3rem;
+	background: url(../images/logo.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -5.725rem;
+	top: 7rem;
+}
+
+.page7 .title {
+	width: 16rem;
+	height: 16rem;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 1px solid #f8d05b;
+	position: absolute;
+	left: 50%;
+	margin-left: -8rem;
+	top:50%;
+	margin-top:-10rem;
+	color: #fedc8a;
+	text-align: center;
+	line-height: 2.5rem;
+}
+
+.page7 .title p.n1 {
+	font-size: 2.1rem;
+	padding-top: 6rem;
+}
+
+.page7 .title p.n2 {
+	font-size: 1.7rem;
+}
+
+.page7 .bar {
+	top: 26rem;
+}
+
+.page7 .word {
+	font-size: 1.4rem;
+	color: #fedc8a;
+	text-align: center;
+	position: absolute;
+	top:50%; margin-top:10rem;
+	left: 0px;
+	width: 100%;
+}
+
+.page7 .btn {
+	display: block;
+	width: 11.4rem;
+	margin-left: -5.7rem;
+	height: 4.35rem;
+	background: url(../images/btn.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	top:50%; margin-top:15rem;
+}
+
+@media screen and (max-width:321px) {
+	.page1 .word {
+		width: 20rem;
+		height: 20rem;
+		background: url(../images/p1.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 8.5rem;
+	}
+
+	.page2 .word {
+		width: 20rem;
+		height: 21.6rem;
+		background: url(../images/p2.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 8.5rem;
+	}
+
+	.bar,.bar1 {
+		bottom: 2rem;
+		left: 0px;
+	}
+
+	.page3 .word {
+		width: 20rem;
+		height: 24rem;
+		background: url(../images/p3.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 7.5rem;
+	}
+
+	.page4 .word {
+		width: 20rem;
+		height: 24rem;
+		background: url(../images/p4.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 7.5rem;
+	}
+
+	.page5 .word {
+		width: 20rem;
+		height: 24rem;
+		background: url(../images/p5.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 7.5rem;
+	}
+
+	.page6 .word {
+		width: 20rem;
+		height: 24rem;
+		background: url(../images/p6.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -10rem;
+		top: 7.5rem;
+	}
+
+	.page7 .logo {
+		width: 10rem;
+		height: 5rem;
+		background: url(../images/logo.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		margin-left: -5rem;
+		top: 5rem;
+	}
+
+	.page7 .title {
+		width: 12rem;
+		height: 12rem;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		border: 1px solid #f8d05b;
+		position: absolute;
+		left: 50%;
+		margin-left: -6rem;
+		top:50%; margin-top:-8rem;
+		color: #fedc8a;
+		text-align: center;
+		line-height: 2.5rem;
+	}
+
+	.page7 .title p.n1 {
+		font-size: 2.1rem;
+		padding-top: 3.5rem;
+	}
+
+	.page7 .title p.n2 {
+		font-size: 1.7rem;
+	}
+
+	.page7 .bar {
+		top: 20rem;
+	}
+
+	.page7 .word {
+		font-size: 1.4rem;
+		color: #fedc8a;
+		text-align: center;
+		position: absolute;
+		top:50%;
+		margin-top:6rem;
+		left: 0px;
+		width: 100%;
+	}
+
+	.page7 .btn {
+		display: block;
+		width: 11.4rem;
+		margin-left: -5.7rem;
+		height: 4.35rem;
+		background: url(../images/btn.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 50%;
+		top:50%;
+		margin-top:10rem;
+	}
+}
+/**/
+.swiper-slide-active .word,.swiper-slide-active .logo {
+	-webkit-animation: inter 1s 1 ease forwards;
+	-moz-animation: inter 1s 1 ease forwards;
+	-ms-animation: inter 1s 1 ease forwards;
+	animation: inter 1s 1 ease forwards;
+}
+
+.swiper-slide-active .bar,.swiper-slide-active .bar1 {
+	-webkit-animation: flash 2s linear 0 1;
+	-moz-animation: flash 2s linear 0 1;
+	-ms-animation: flash 2s linear 0 1;
+	animation: flash 2s linear 0 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.swiper-slide-active .title p.n1 {
+	-webkit-animation: inter 1s linear 0 1;
+	-moz-animation: inter 1s linear 0 1;
+	-ms-animation: inter 1s linear 0 1;
+	animation: inter 1s linear 0 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.swiper-slide-active .title p.n2 {
+	-webkit-animation: inter 1s linear 0 1;
+	-moz-animation: inter 1s linear 0 1;
+	-ms-animation: inter 1s linear 0 1;
+	animation: inter 1s linear 0 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/*css3*/
+/*向上滑动动画*/
+@-webkit-keyframes ani_arrow {
+	0% {
+		
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px)
+	}
+	50%{
+		
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px)
+	}
+
+	100% {
+		
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px)
+	}
+}
+
+
+@keyframes ani_arrow {
+	0% {
+		
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px)
+	}
+	50%{
+		
+		-webkit-transform: translateY(4px);
+		transform: translateY(4px)
+	}
+
+	100% {
+		
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px)
+	}
+}
+@-webkit-keyframes inter{
+	0%{
+		transform: translateY(50px);-webkit-transform: translateY(50px);opacity:0;
+	}
+	100%{
+		transform: translateY(0);-webkit-transform: translateY(0);opacity:1;
+	}
+}
+@keyframes inter{
+	0%{
+		transform: translateY(50px);-webkit-transform: translateY(50px);opacity:0;
+	}
+	100%{
+		transform: translateY(0);-webkit-transform: translateY(0);opacity:1;
+	}
+}
+
+@-webkit-keyframes flash {
+	
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.flash {
+	-webkit-animation-name: flash;
+	animation-name: flash;
+}
+

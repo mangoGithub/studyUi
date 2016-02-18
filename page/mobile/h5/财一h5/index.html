@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+	<title>宜信财富-宜人宜己 信用中国</title>
+    <link rel="stylesheet" href="resource/css/guide.css"/>
+    <link rel="stylesheet" href="resource/css/swiper.min.css"/>
+   <!-- <link rel="stylesheet" href="resource/css/animate.css"/>-->
+</head>
+
+<body>
+	<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page2">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page3">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page4">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page5">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page6">
+            	<p class="word"></p>
+            	<div class="icos_arrow"></div>
+            </div>
+            <div class="swiper-slide page7">
+            	<p class="logo"></p>
+                <div class="title">
+                	<p class="n1">您可信赖的</p>
+                    <p class="n2">财富管理伙伴</p>
+                </div>
+                <p class="word">财富管理好，幸福自然来！</p>
+                <a href="#" class="btn"></a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="landscape">
+        <div class="iphone"></div>
+        <div class="iphone_text">请将屏幕竖向浏览</div>
+    </div>
+   	<script type="text/javascript" src="resource/js/swiper.min.js"></script>
+	<script>
+    	var Myswiper = new Swiper('.swiper-container', {
+			direction : 'vertical',
+			onTap: function(swiper){
+				if(swiper.isEnd){
+					alert('回到首页');
+				}
+			},
+			
+		});
+		//文字
+		(function() {
+		      	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		      	var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		        var fontSize = Math.min(w, h)/32;
+		        if(fontSize > 16) {
+		          fontSize = 16;
+		        }
+		        document.getElementsByTagName('html')[0].setAttribute("style", "font-size:" + fontSize + "px");
+		      }());
+
+    </script>
+</body>
+</html>

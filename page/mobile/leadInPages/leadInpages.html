@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>星火—星火燎原，成就金融梦想！</title>
+	<meta name="description" content="星火是宜信公司推出，服务于内部员工及其亲友的财富管理服务和回馈计划，星火团队为广大宜信员工及亲朋好友，提供最好、最专业的财富管理服务，共同实现我们的梦想：普惠金融梦！">
+	<meta name="keywords" content="星火，财富管理，理财，普惠金融，理财服务，投资理财，互联网金融，星火团队">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/leadInpages.css">
+    <!-- Demo styles -->
+   
+</head>
+<body> 
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+            	<h2 title="理财很简单"></h2>
+                <h3 title="私人理财师专业指导"></h3>
+            	<p></p>
+                <!--<img src="images/page1.jpg" width="100%" height="100%"/>-->
+            </div>
+            <div class="swiper-slide page2">
+            	<h1 title="理财很安心"></h1>
+                <h2 title="宜信优质债权放心购"></h2>
+                <p class="yun y1"></p>
+                <p class="yun y"></p>
+                <p class="man"></p>
+                <p class="z"></p>
+                <!--<img src="images/page2.jpg" width="100%" height="100%"/>-->
+            </div>
+            <div class="swiper-slide page3">
+            	<h1 title="理财很赚钱"></h1>
+                <h2 title="点滴投入赢得生活"></h2>
+                <p class="yun y1"></p>
+                <p class="yun y"></p>
+                <p class="sw"></p>
+                <p class="sw wo"></p>
+                <!--<img src="images/page3.jpg" width="100%" height="100%"/>-->
+            </div>
+            <div class="swiper-slide page4">
+            	<h1 title="星火"></h1>
+                <p class="yun y1"></p>
+                <p class="yun y"></p>
+                <p class="btn"></p>
+                <!--<img src="images/page4.jpg" width="100%" height="100%"/>-->
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+	<!--<div class="loadImg">
+    	<img src="images/page1_t1.png" class="img1"/>
+        <img src="images/page1_t.png" class="img1"/>
+        <img src="images/btn.png" class="img1"/>
+        <img src="images/logo.png" class="img1"/>
+        <img src="images/page1_man.png" class="img1"/>
+        <img src="images/page2_man.png" class="img1"/>
+        <img src="images/page2_t.png" class="img1"/>
+        <img src="images/page2_t1.png" class="img1"/>
+        <img src="images/page2_z.png" class="img1"/>
+        <img src="images/page3_t.png" class="img1"/>
+        <img src="images/page3_t1.png" class="img1"/>
+    </div>-->
+    <!-- Swiper JS -->
+	<script src="js/swiper.min.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+	$(document).ready(function(){ 
+		//$("img").LoadImage();
+		var per = $(window).height()/2208;
+		$('.page1 p').css('bottom',per*460/16+'em');
+		$('.page2 p.man').css('bottom',per*560/16+'em');
+		$('.page2 p.z').css('bottom',per*640/16+'em');
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationHide :false,
+			//effect : 'fade',
+			onClick: function(swiper){
+				if(swiper.isEnd){
+					window.open('http:login');
+				}
+			}
+		});
+		
+	});
+/*
+ 图片预加载
+*/
+jQuery.fn.LoadImage=function(){
+	return this.each(function(){
+		var t=$(this);
+		var src=$(this).attr("src")
+		var img=new Image();
+		img.src=src;
+		$(this).attr("src","");
+		$(img).load(function(){
+			t.attr("src",this.src);
+		});
+	});
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no"/>
+	<title>canvas</title>
+</head>
+
+<body bgcolor="#0066FF">
+<canvas id="game">
+
+</canvas>
+</body>
+</html>
+<script src="../../resource/public/jquery-min.js"></script>
+<script src="../../resource/mobile/js/jcscript.js"></script>
+<script>
+$(function(){
+	
+});
+gamePge();
+function gamePge(){
+	$('#game').attr({'width':$(window).width(),'height':$(window).height()});
+	var _this = this;//闭包
+	_this.monster = {
+		mon1 : function(option){//怪物一
+			var img = new Image();
+			img.src = "../resource/mobile/images/inv01.jpg";
+			img.onload = function(){
+				jc.start(option.canvas);
+				jc.image(img,100,100,60,61);
+				jc.start(option.canvas);
+			}
+		},
+		mon2 : function(option){//怪物一
+			var img = new Image();
+			img.src = "../resource/mobile/images/inv02.jpg";
+			img.onload = function(){
+				jc.start(option.canvas);
+				jc.image(img,200,200,60,61);
+				jc.start(option.canvas);
+			}
+		},
+		mon3 : function(option){//怪物一
+			var img = new Image();
+			img.src = "../resource/mobile/images/inv03.jpg";
+			img.onload = function(){
+				jc.start(option.canvas);
+				jc.image(img,300,100,60,61);
+				jc.start(option.canvas);
+			}
+		},
+		mon4 : function(option){//怪物一
+			var img = new Image();
+			img.src = "../resource/mobile/images/inv04.jpg";
+			img.onload = function(){
+				jc.start(option.canvas);
+				jc.image(img,400,500,60,61);
+				jc.start(option.canvas);
+			}
+		}
+	}
+	_this.arrNum = [];
+}
+</script>

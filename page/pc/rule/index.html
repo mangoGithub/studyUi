@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="description" content=""/>
+    <meta http-equiv="keywords" content=""/>
+    <link rel="stylesheet" href="../../resource/pc/css/core/reset.css"/>
+   	<link rel="stylesheet" href="../../resource/pc/css/core/mod.css"/>
+	<title>资料</title>
+</head>
+
+<body>
+	<div class="head">
+    	<ul class="fl">
+        	<li>web资料和API</li>
+        </ul>
+    	<ul class="fr clear">
+        	<li><a href="#" class="act">前端基础</a></li>
+            <li><a href="#">css3+html5</a></li>
+            <li><a href="#">js基础</a></li>
+            <li><a href="#">js框架</a></li>
+        </ul>
+    </div>
+	<div class="layout clear">
+    	<div class="layleft">
+        	<a href="#" class="act">前端css规范</a>
+            <a href="#">前端javascript规范</a>
+        </div>
+        <div class="layright">
+        	<h2>前端CSS规范</h2>
+            <p>整理了Web前端开发中的各种CSS规范，包括文件规范、注释规范、命名规范、书写规范、测试规范等</p>
+            <h3>一、文件规范</h3>
+            <p>1、文件均归档至约定的目录中。</p>
+            <p>具体要求通过豆瓣的CSS规范然后自称一套规范进行讲解：</p>
+            <p>所有的CSS分为两大类：通用类和业务类。通用的CSS文件，放在如下目录中：</p>
+            <ul>
+                <li>基本样式库 /css/core</li>
+                <li>通用UI元素样式库 /css/lib</li>
+                <li>JS组件相关样式库 /css/ui</li>
+            </ul>
+            <p>业务类的CSS是指和具体产品相关的文件，放在如下目录中：</p>
+            <ul>
+                <li>读书 /css/book/</li>
+                <li>电影 /css/movie/</li>
+                <li>音乐 /css/music/</li>
+                <li>社区 /css/sns/</li>
+                <li>小站 /css/site/</li>
+                <li>同城 /css/location/</li>
+                <li>电台 /css/radio/</li>
+            </ul>
+
+            <p>外联CSS文件适用于全站级和产品级通用的大文件。内联CSS文件适用于在一个或几个页面共用的CSS。另外一对具体的CSS进行文档化的整理。如：</p>
+            <ul>
+                <li>util-01 reset /css/core/reset.css</li>
+                <li>util-02 通用模块容器 /css/core/mod.css</li>
+                <li>ui-01. 喜欢按钮 /css/core/fav_btn.css</li>
+                <li>ui-02. 视频/相册列表项 /css/core/media_item.css</li>
+                <li>ui-03. 评星 /css/core/rating.css</li>
+                <li>ui-04. 通用按钮 /css/core/common_button.css</li>
+                <li>ui-05. 分页 /css/core/pagination.css</li>
+                <li>ui-06. 推荐按钮 /css/core/rec_btn.css</li>
+                <li>ui-07. 老版对话框 /css/core/old_dialog.css</li>
+                <li>ui-08. 老版Tab /css/core/old_tab.css</li>
+                <li>ui-09. 老版成员列表 /css/core/old_userlist.css</li>
+                <li>ui-10. 老版信息区 /css/core/notify.css</li>
+                <li>ui-11. 社区用户导航 /css/core/profile_nav.css</li>
+                <li>ui-12. 当前大社区导航 /css/core/site_nav.css</li>
+                <li>ui-13. 加载中 /css/lib/loading.css</li>
+            </ul>
+            <p>2、文件引入可通过外联或内联方式引入。</p>
+            <p>外联方式：（类型声明type="text/css"可以省略）</p>
+            <p>内联方式： （类型声明type="text/css"可以省略）</p>
+            <p>link和style标签都应该放入head中，原则上，不允许在html上直接写样式。避免在CSS中使用@import，嵌套不要超过一层。</p>
+            
+            <p>3、文件名、文件编码及文件大小</p>
+            <p>文件名必须由小写字母、数字、中划线组成</p>
+            <p>文件必须用UTF-8编码，使用UTF-8（非BOM），在HTML中指定UTF-8编码，在CSS中则不需要特别指定因为默认就是UTF-8。</p>
+            <p>单个CSS文件避免过大（建议少于300行）</p>
+            <h3>二、注释规范</h3>
+            <p>1、文件顶部注释（推荐使用）</p>
+            <dd>
+                <dl>/*</dl>
+                <dl>* @description: 中文说明</dl>
+                <dl>* @author: name</dl>
+                <dl>* @update: name (2013-04-13 18:32)</dl>
+                <dl>*/</dl>
+                <dl class="dt">复制代码</dl>
+            </dd>
+            
+            <p>2、模块注释</p>
+            <dd>
+                <dl>/* module: module1 by 张三 */</dl>
+                <dl>…</dl>
+                <dl>/* module: module2 by 张三 */</dl>
+                <dl class="dt">复制代码</dl>
+            </dd>
+
+            <p>模块注释必须单独写在一行</p>
+            
+            <p>3、 单行注释与多行注释</p>
+            <p>/* this is a short comment */</p>
+            <p>单行注释可以写在单独一行，也可以写在行尾，注释中的每一行长度不超过40个汉字，或者80个英文字符。</p>
+            <p>/*</p>
+            <p>* this is comment line 1.</p>
+            <p>* this is comment line 2.</p>
+            <p>*/</p>
+            <p>多行注释必须写在单独行内</p>
+            
+            <p>4、特殊注释</p>
+            <p>/* TODO: xxxx by name 2013-04-13 18:32 */</p>
+            <p>/* BUGFIX: xxxx by name 2012-04-13 18:32 */</p>
+            <p>用于标注修改、待办等信息</p>
+            <p>5、区块注释</p> 
+            <dd>
+                <dl>/* Header */</dl>
+                <dl>/* Footer */</dl>
+                <dl>/* Gallery */</dl>
+                <dl class="dt">复制代码</dl>
+            </dd>
+			<p>对一个代码区块注释（可选），将样式语句分区块并在新行中对其注释。</p>
+            <p>三、命名规范
+            <p>使用有意义的或通用的ID和class命名：ID和class的命名应反映该元素的功能或使用通用名称，而不要用抽象的晦涩的命名。反映元素的使用目的是首选；使用通用名称代表该元素不表特定意义，与其同级元素无异，通常是用于辅助命名；使用功能性或通用的名称可以更适用于文档或模版变化的情况。</p>
+            <ul>
+                <li>/* 不推荐: 无意义 */ #yee-1901 {}</li>
+                <li>/* 不推荐: 与样式相关 */ .button-green {}.clear {}</li>
+                <li>/* 推荐: 特殊性 */ #gallery {}#login {}.video {}</li>
+                <li>/* 推荐: 通用性 */ .aux {}.alt {}
+                </li>
+            </ul>
+            <p>常用命名（多记多查英文单词
+            ）：page、wrap、layout、header(head)、footer(foot、ft)、content(cont)、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips等
+            ID和class命名越简短越好，只要足够表达涵义。这样既有助于理解，也能提高代码效率。</p>
+            <ul>
+                <li>/* 不推荐 */ #navigation {}.atr {}</li>
+                <li>/* 推荐 */ #nav {}.author {}
+                </li>
+            </ul>
+            <p>类型选择器避免同时使用标签、ID和class作为定位一个元素选择器；从性能上考虑也应尽量减少选择器的层级。</p>
+            <ul>
+                <li>/* 不推荐 */ul#example {}div.error {}</li>
+                <li>/* 推荐 */#example {}.error {}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
